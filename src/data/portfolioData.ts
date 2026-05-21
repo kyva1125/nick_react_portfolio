@@ -1,0 +1,113 @@
+export const PortfolioData = {
+  imagesCine: [
+    '/assets/images/cine/1.png',
+    '/assets/images/cine/2.png',
+    '/assets/images/cine/3.png',
+  ],
+  imagesImc: [
+    '/assets/images/imc/1.png',
+    '/assets/images/imc/2.png',
+  ],
+  imagesMienfermera: [
+    '/assets/images/mienfermera/1.png',
+    '/assets/images/mienfermera/2.png',
+    '/assets/images/mienfermera/3.png',
+    '/assets/images/mienfermera/4.png',
+    '/assets/images/mienfermera/5.png',
+  ],
+  imagesOxigeno: [
+    '/assets/images/oxigeno/1.png',
+    '/assets/images/oxigeno/2.png',
+    '/assets/images/oxigeno/3.png',
+  ],
+  imagesPecano: [
+    '/assets/images/pecano/1.png',
+    '/assets/images/pecano/2.png',
+    '/assets/images/pecano/3.png',
+  ],
+  imagesPecanoWeb: [
+    '/assets/images/pecano_web/1.png',
+    '/assets/images/pecano_web/2.png',
+  ],
+  imagesRestoner: [
+    '/assets/images/restoner/1.png',
+    '/assets/images/restoner/2.png',
+    '/assets/images/restoner/3.png',
+    '/assets/images/restoner/6.png',
+    '/assets/images/restoner/7.png',
+    '/assets/images/restoner/8.png',
+    '/assets/images/restoner/9.png',
+    '/assets/images/restoner/10.png',
+    '/assets/images/restoner/11.png',
+  ],
+  imagesSeguridad: [
+    '/assets/images/seguridad/1.png',
+    '/assets/images/seguridad/2.png',
+    '/assets/images/seguridad/3.png',
+    '/assets/images/seguridad/4.png',
+  ],
+  imagesComsatel: [
+    '/assets/images/comsatel/1.jpg',
+    '/assets/images/comsatel/2.jpg',
+    '/assets/images/comsatel/3.jpg',
+    '/assets/images/comsatel/4.jpg',
+    '/assets/images/comsatel/5.jpg',
+  ],
+  imagesEnotria: [
+    '/assets/images/enotria/1.jpg',
+    '/assets/images/enotria/2.jpg',
+    '/assets/images/enotria/3.jpg',
+    '/assets/images/enotria/4.jpg',
+  ],
+  imagesAndytrack: [
+    '/assets/images/andytrack/1.jpg',
+    '/assets/images/andytrack/2.jpg',
+    '/assets/images/andytrack/3.jpg',
+    '/assets/images/andytrack/4.jpg',
+  ],
+  imagesDevida: [
+    '/assets/images/devida/1.png',
+    '/assets/images/devida/2.png',
+    '/assets/images/devida/3.png',
+  ],
+  imagesMerakicare: [
+    '/assets/images/merakicare/1.jpeg',
+    '/assets/images/merakicare/2.jpeg',
+    '/assets/images/merakicare/3.jpeg',
+    '/assets/images/merakicare/4.jpeg',
+    '/assets/images/merakicare/5.jpeg',
+    '/assets/images/merakicare/6.jpeg',
+  ],
+};
+
+export const imagesPortfolio = [
+  '/assets/images/cine/1.png',
+  '/assets/images/imc/1.png',
+  '/assets/images/mienfermera/1.png',
+  '/assets/images/oxigeno/1.png',
+  '/assets/images/pecano/1.png',
+  '/assets/images/pecano_web/1.png',
+  '/assets/images/restoner/1.png',
+  '/assets/images/seguridad/1.png',
+  '/assets/images/comsatel/1.jpg',
+  '/assets/images/enotria/1.jpg',
+  '/assets/images/devida/1.png',
+  '/assets/images/andytrack/1.jpg',
+  '/assets/images/merakicare/1.jpeg',
+];
+
+export const listImagesPortfolio = [
+  PortfolioData.imagesCine,
+  PortfolioData.imagesImc,
+  PortfolioData.imagesMienfermera,
+  PortfolioData.imagesOxigeno,
+  PortfolioData.imagesPecano,
+  PortfolioData.imagesPecanoWeb,
+  PortfolioData.imagesRestoner,
+  PortfolioData.imagesSeguridad,
+  PortfolioData.imagesComsatel,
+  PortfolioData.imagesEnotria,
+  PortfolioData.imagesDevida,
+  PortfolioData.imagesAndytrack,
+  PortfolioData.imagesMerakicare,
+];

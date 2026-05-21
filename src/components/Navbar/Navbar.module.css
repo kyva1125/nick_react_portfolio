@@ -1,0 +1,101 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.navbar.scrolled {
+  background: rgba(0, 33, 71, 0.85);
+  backdrop-filter: blur(10px);
+  height: 70px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor: pointer;
+  letter-spacing: 2px;
+}
+
+.menuIcon {
+  display: none;
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.navMenu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.navLinks {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.navLinks::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.navLinks:hover::after, .activeLink::after {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .menuIcon {
+    display: block;
+  }
+  
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    background: var(--bg-color-2);
+    padding: 2rem;
+    transition: all 0.4s ease;
+    opacity: 0;
+    gap: 1.5rem;
+    pointer-events: none;
+  }
+  
+  .navMenu.active {
+    left: 0;
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    pointer-events: all;
+  }
+}
