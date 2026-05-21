@@ -4,40 +4,52 @@ import styles from './Experience.module.css';
 
 const EXPERIENCES = [
   {
-    period: 'Junio 2024 - Enero 2026',
-    company: 'ANDES EXPRESS',
-    role: 'Analista Flutter Developer',
-    description: 'Desarrollo y reingeniería del aplicativo Andytrack para recojo y reparto de productos'
+    period: 'Julio 2024 - Enero 2026',
+    company: 'ANDES EXPRESS S.A.C',
+    role: 'Desarrollador y mantenedor de Andytrack (Flutter)',
+    description: 'Encargado del desarrollo, funcionamiento y mantenimiento de la aplicación central Andytrack. Implementación de mejoras continuas en rendimiento, estabilidad y experiencia de usuario. Desarrollo de soluciones para la gestión logística utilizada por más de 500 couriers a nivel nacional.'
+  },
+  {
+    period: 'Junio 2025 - Diciembre 2025',
+    company: 'DEVIDA',
+    role: 'Desarrollador React',
+    description: 'Participación en el desarrollo y mantenimiento de soluciones tecnológicas orientadas a optimizar procesos de gestión. Implementación de mejoras funcionales en aplicaciones web con React, Node.js y SQL Server, siguiendo buenas prácticas de arquitectura.'
   },
   {
     period: 'Octubre 2023 - Junio 2024',
     company: 'XTend SAC',
-    role: 'Semi Sr. Flutter Developer',
-    description: 'Encargado de desarrollar aplicativo para la gestión de citas para la empresa COMSATEL. Desarrollador semi senior con la capacidad de análisis de requisitos. Modificador de funcionalidades del aplicativo ENOTRIA de recojo de paquetes.'
+    role: 'Jefe de Proyecto - App Flutter / COMSATEL',
+    description: 'Responsable del desarrollo y mantenimiento de una aplicación de gestión de citas para instalación, mantenimiento y retiro de dispositivos de rastreo. Coordinación de requerimientos y optimización técnica de campo.'
   },
   {
-    period: 'Octubre 2022 – Octubre 2023',
+    period: 'Octubre 2022 - Octubre 2023',
     company: 'PECANO SOFTWARE SAC',
-    role: 'Desarrollador Flutter Developer',
-    description: 'Encargado de desarrollar aplicativos para comercios que administran los grifos. Migración a web con Flutter para el aplicativo comercio. Desarrollo de POS de Tankea.'
+    role: 'Desarrollador de aplicaciones Flutter',
+    description: 'Encargado de desarrollar el aplicativo STARTUP para comercios que premian a usuarios por recargar gasolina acumulando puntos. Creación de la versión web de comercio en Flutter y desarrollo del POS de Tankea.'
   },
   {
-    period: 'Marzo 2022 – Septiembre 2022',
+    period: 'Marzo 2022 - Septiembre 2022',
     company: 'FREELANCER',
-    role: 'Desarrollador de apps móvil y web – Seguridad Ciudadana',
-    description: 'Diseño de todo el aplicativo utilizando Figma. Desarrollo del aplicativo Seguridad Ciudadana. Rastreo de ciudadanos a través del mapa utilizando GPS.'
+    role: 'Desarrollador Móvil y Web - Seguridad Ciudadana',
+    description: 'Diseño en Figma y desarrollo/mantenimiento del aplicativo móvil y web para Seguridad Ciudadana. Implementación de rastreo en tiempo real a través de mapas y GPS para alertar de delincuencia.'
   },
   {
-    period: 'Marzo 2022 – Agosto 2022',
+    period: 'Marzo 2022 - Agosto 2022',
     company: 'FREELANCER',
-    role: 'Desarrollador de app desktop - Gestión de botellas de O2',
-    description: 'Control de almacén para el inventario de botellas de O2, Co2, etc. Reporte a través de PDF.'
+    role: 'Desarrollador de App Desktop - Gestión de O2',
+    description: 'Diseño en Figma y desarrollo del aplicativo de escritorio para control de almacén e inventario de botellas de O2, Co2, etc. Generación de reportes de inventarios en formato PDF.'
   },
   {
-    period: 'Enero 2021 – Octubre 2021',
+    period: 'Enero 2021 - Octubre 2021',
     company: 'FREELANCER',
-    role: 'Desarrollador de aplicaciones móviles - Delivery',
-    description: 'Creación de Comercios y sucursales, para un seguimiento de los pedidos.'
+    role: 'Desarrollador Móvil - Delivery de Comida',
+    description: 'Desarrollo de aplicativo STARTUP diseñado en AdobeXD. Creación de franquicias dentro del app para comercios y sucursales con seguimiento de pedidos de entrega.'
+  },
+  {
+    period: 'Febrero 2020 - Noviembre 2020',
+    company: 'FREELANCER',
+    role: 'Desarrollador Móvil - Búsqueda de Enfermeras',
+    description: 'Desarrollo de aplicativo con seguimiento de GPS para búsqueda de enfermeras para atender pacientes a domicilio durante la pandemia.'
   }
 ];
 

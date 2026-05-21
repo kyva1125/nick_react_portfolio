@@ -1,22 +1,26 @@
 import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaJava, FaApple, FaAndroid, FaFigma, FaGitAlt } from 'react-icons/fa';
-import { SiFlutter, SiDart, SiFirebase, SiJavascript, SiPostgresql } from 'react-icons/si';
+import { SiFlutter, SiDart, SiFirebase, SiJavascript, SiPostgresql, SiSupabase, SiMongodb, SiMysql, SiDjango } from 'react-icons/si';
 import { TitleArea } from '../TitleArea/TitleArea';
 import styles from './Skills.module.css';
 
 const SKILLS = [
   { name: 'Flutter', icon: SiFlutter, color: '#02569B' },
   { name: 'Dart', icon: SiDart, color: '#0175C2' },
+  { name: 'React', icon: FaReact, color: '#61DAFB' },
+  { name: 'Node.js', icon: FaNodeJs, color: '#339933' },
+  { name: 'Django', icon: SiDjango, color: '#092E20' },
   { name: 'Firebase', icon: SiFirebase, color: '#FFCA28' },
+  { name: 'Supabase', icon: SiSupabase, color: '#3ECF8E' },
+  { name: 'PostgreSQL', icon: SiPostgresql, color: '#336791' },
+  { name: 'MySQL', icon: SiMysql, color: '#4479A1' },
+  { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
+  { name: 'Figma', icon: FaFigma, color: '#F24E1E' },
+  { name: 'Git', icon: FaGitAlt, color: '#F05032' },
   { name: 'Android', icon: FaAndroid, color: '#3DDC84' },
   { name: 'iOS', icon: FaApple, color: '#999999' },
   { name: 'Java', icon: FaJava, color: '#007396' },
   { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
-  { name: 'React', icon: FaReact, color: '#61DAFB' },
-  { name: 'Node.js', icon: FaNodeJs, color: '#339933' },
-  { name: 'PostgreSQL', icon: SiPostgresql, color: '#336791' },
-  { name: 'Figma', icon: FaFigma, color: '#F24E1E' },
-  { name: 'Git', icon: FaGitAlt, color: '#F05032' },
 ];
 
 export const Skills = () => {
