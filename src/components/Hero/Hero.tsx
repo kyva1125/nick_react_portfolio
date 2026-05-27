@@ -1,19 +1,22 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaWhatsapp, FaGithub } from 'react-icons/fa';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './Hero.module.css';
 
-const ROLES = ['Flutter Senior Developer', 'React Developer', 'Node.js Developer', 'Desarrollador Mobile & Web'];
-
 export const Hero = () => {
+  const { language, t } = useLanguage();
   const [roleIndex, setRoleIndex] = useState(0);
+
+  const heroTrans = t('hero');
+  const roles = heroTrans.roles;
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setRoleIndex((prev) => (prev + 1) % ROLES.length);
+      setRoleIndex((prev) => (prev + 1) % roles.length);
     }, 2500);
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
   return (
     <section id="hero" className={`section ${styles.heroSection}`}>
@@ -25,7 +28,7 @@ export const Hero = () => {
             transition={{ duration: 0.8 }}
             className={styles.greeting}
           >
-            Hola, Yo Soy
+            {heroTrans.greeting}
           </motion.h3>
           <motion.h1 
             initial={{ opacity: 0, x: -50 }}
@@ -33,7 +36,7 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className={styles.name}
           >
-            Nick Ledesma
+            {heroTrans.name}
           </motion.h1>
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -41,9 +44,9 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className={styles.roleContainer}
           >
-            <span className={styles.greeting}>Y Soy </span>
-            <span className={styles.animatedRole} key={roleIndex}>
-              {ROLES[roleIndex]}
+            <span className={styles.greeting}>{heroTrans.rolePrefix}</span>
+            <span className={styles.animatedRole} key={`${language}-${roleIndex}`}>
+              {roles[roleIndex]}
             </span>
           </motion.div>
           <motion.p 
@@ -52,7 +55,7 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className={styles.description}
           >
-            Desarrollador de aplicaciones móviles, web y desktop con experiencia en el desarrollo de soluciones tecnológicas escalables y enfocadas en el usuario. Especializado en Flutter, con sólidos conocimientos en arquitectura de software, servicios BaaS/SaaS, UI/UX y bases de datos relacionales y NoSQL.
+            {heroTrans.description}
           </motion.p>
           
           <motion.div 
@@ -78,9 +81,9 @@ export const Hero = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className={styles.contactInfo}
           >
-            <p>Celular: +51 993 475 959</p>
-            <p>Correo: kyva1125@hotmail.com</p>
-            <p>Ubicación: Ayacucho, Perú</p>
+            <p>{heroTrans.cell}: +51 993 475 959</p>
+            <p>{heroTrans.email}: kyva1125@hotmail.com</p>
+            <p>{heroTrans.location}: {heroTrans.locationValue}</p>
           </motion.div>
         </div>
 

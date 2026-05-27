@@ -1,23 +1,19 @@
 import { motion } from 'framer-motion';
 import { TitleArea } from '../TitleArea/TitleArea';
 import { FaGraduationCap, FaLanguage, FaAward } from 'react-icons/fa';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './About.module.css';
 
-const SOFT_SKILLS = [
-  'Trabajo en equipo',
-  'Autogestión',
-  'Comunicación efectiva',
-  'Resolución de problemas',
-  'Adaptabilidad',
-  'Responsabilidad',
-  'Aprendizaje continuo'
-];
-
 export const About = () => {
+  const { t } = useLanguage();
+  
+  const aboutTrans = t('about');
+  const softSkills = aboutTrans.softSkillsList;
+
   return (
     <section id="about" className={`section ${styles.aboutSection}`}>
       <div className="container">
-        <TitleArea primero="Acerca de" segundo="Mi!" secondColor="var(--accent-color)" />
+        <TitleArea primero={aboutTrans.titleStart} segundo={aboutTrans.titleEnd} secondColor="var(--accent-color)" />
         
         <div className={styles.gridContainer}>
           <motion.div 
@@ -27,12 +23,12 @@ export const About = () => {
             transition={{ duration: 0.8 }}
             className={styles.bioContainer}
           >
-            <h4 className={styles.subtitle}>Nick Bryan Ledesma Corilloclla</h4>
+            <h4 className={styles.subtitle}>{aboutTrans.subtitle}</h4>
             <p className={styles.description}>
-              Desarrollador de aplicaciones móviles, web y desktop con experiencia en el desarrollo de soluciones tecnológicas escalables y enfocadas en el usuario. Especializado en <strong>Flutter</strong>, con sólidos conocimientos en arquitectura de software, integración con servicios BaaS/SaaS, diseño UI/UX y gestión de bases de datos relacionales y NoSQL.
+              {aboutTrans.bioParagraph1}
             </p>
             <p className={styles.description}>
-              Me caracterizo por ser una persona proactiva, autodidacta, responsable y orientada a resultados, con capacidad para adaptarme rápidamente a nuevos retos tecnológicos y trabajar eficientemente en equipo. Además, cuento con conocimientos en tecnologías web modernas como <strong>React</strong> y <strong>Node.js</strong>, ampliando mi perfil hacia el desarrollo full stack.
+              {aboutTrans.bioParagraph2}
             </p>
           </motion.div>
 
@@ -47,17 +43,17 @@ export const About = () => {
             >
               <div className={styles.cardHeader}>
                 <FaGraduationCap className={styles.cardIcon} />
-                <h3>Educación</h3>
+                <h3>{aboutTrans.educationTitle}</h3>
               </div>
               <div className={styles.cardContent}>
                 <div className={styles.educationItem}>
                   <span className={styles.year}>2022 | Ayacucho - Perú</span>
-                  <h4>Ingeniería de Sistemas</h4>
+                  <h4>{aboutTrans.educationDegree1}</h4>
                   <p className={styles.institution}>Universidad Nacional de San Cristóbal de Huamanga</p>
                 </div>
                 <div className={styles.educationItem}>
                   <span className={styles.year}>2019 | Ayacucho - Perú</span>
-                  <h4>Técnico en Hardware Informático</h4>
+                  <h4>{aboutTrans.educationDegree2}</h4>
                   <p className={styles.institution}>Instituto Peruano Alemán</p>
                 </div>
               </div>
@@ -73,18 +69,15 @@ export const About = () => {
             >
               <div className={styles.cardHeader}>
                 <FaLanguage className={styles.cardIcon} />
-                <h3>Idiomas</h3>
+                <h3>{aboutTrans.languagesTitle}</h3>
               </div>
               <div className={styles.cardContent}>
                 <div className={styles.languageItem}>
-                  <strong>Español:</strong> <span>Nativo</span>
+                  <span>{aboutTrans.languagesNative}</span>
                 </div>
                 <div className={styles.languageItem}>
-                  <strong>Inglés:</strong>
-                  <ul>
-                    <li>Lectura y escritura: Intermedio</li>
-                    <li>Hablado: Básico</li>
-                  </ul>
+                  <strong>{aboutTrans.languagesEnglish}</strong>
+                  <p style={{ marginTop: '0.2rem', fontSize: '0.85rem' }}>{aboutTrans.languagesEnglishDetails}</p>
                 </div>
               </div>
             </motion.div>
@@ -99,11 +92,11 @@ export const About = () => {
             >
               <div className={styles.cardHeader}>
                 <FaAward className={styles.cardIcon} />
-                <h3>Habilidades Blandas</h3>
+                <h3>{aboutTrans.softSkillsTitle}</h3>
               </div>
               <div className={styles.cardContent}>
                 <div className={styles.tagsContainer}>
-                  {SOFT_SKILLS.map((skill, i) => (
+                  {softSkills.map((skill, i) => (
                     <span key={i} className={styles.tag}>{skill}</span>
                   ))}
                 </div>

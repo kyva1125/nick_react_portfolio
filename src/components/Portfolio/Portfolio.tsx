@@ -3,11 +3,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { TitleArea } from '../TitleArea/TitleArea';
 import { imagesPortfolio, listImagesPortfolio } from '../../data/portfolioData';
 import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './Portfolio.module.css';
 
 export const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const { t } = useLanguage();
+
+  const portfolioTrans = t('portfolio');
 
   const reversedImages = [...imagesPortfolio].reverse();
   const reversedLists = [...listImagesPortfolio].reverse();
@@ -41,7 +45,7 @@ export const Portfolio = () => {
   return (
     <section id="portfolio" className="section">
       <div className="container">
-        <TitleArea primero="Últimos" segundo="Proyectos" />
+        <TitleArea primero={portfolioTrans.titleStart} segundo={portfolioTrans.titleEnd} />
         <div className={styles.grid}>
           {reversedImages.map((imgSrc, index) => (
             <motion.div
@@ -56,7 +60,7 @@ export const Portfolio = () => {
             >
               <img src={imgSrc} alt={`Proyecto ${index}`} loading="lazy" />
               <div className={styles.overlay}>
-                <span>Ver Galería</span>
+                <span>{portfolioTrans.viewGallery}</span>
               </div>
             </motion.div>
           ))}

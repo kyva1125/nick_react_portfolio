@@ -6,10 +6,11 @@ import { Experience } from './components/Experience/Experience';
 import { Services } from './components/Services/Services';
 import { Portfolio } from './components/Portfolio/Portfolio';
 import { Footer } from './components/Footer/Footer';
+import { LanguageProvider } from './context/LanguageContext';
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       <Navbar />
       <Hero />
       <About />
@@ -18,7 +19,7 @@ function App() {
       <Services />
       <Portfolio />
       <Footer />
-    </>
+    </LanguageProvider>
   );
 }
 

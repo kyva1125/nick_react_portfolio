@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaJava, FaApple, FaAndroid, FaFigma, FaGitAlt } from 'react-icons/fa';
 import { SiFlutter, SiDart, SiFirebase, SiJavascript, SiPostgresql, SiSupabase, SiMongodb, SiMysql, SiDjango } from 'react-icons/si';
 import { TitleArea } from '../TitleArea/TitleArea';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './Skills.module.css';
 
 const SKILLS = [
@@ -24,10 +25,13 @@ const SKILLS = [
 ];
 
 export const Skills = () => {
+  const { t } = useLanguage();
+  const skillsTrans = t('skills');
+
   return (
     <section id="skills" className="section">
       <div className="container">
-        <TitleArea primero="Mis" segundo="Habilidades" />
+        <TitleArea primero={skillsTrans.titleStart} segundo={skillsTrans.titleEnd} />
         <div className={styles.grid}>
           {SKILLS.map((skill, index) => (
             <motion.div

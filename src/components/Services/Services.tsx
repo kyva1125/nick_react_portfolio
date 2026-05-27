@@ -1,33 +1,25 @@
 import { motion } from 'framer-motion';
 import { TitleArea } from '../TitleArea/TitleArea';
 import { FaMobileAlt, FaLaptopCode, FaServer } from 'react-icons/fa';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './Services.module.css';
 
-const SERVICES = [
-  {
-    title: 'Desarrollo Móvil',
-    content: 'Creación de aplicaciones nativas y multiplataforma con Flutter y React Native, de alto rendimiento y excelente UX/UI.',
-    icon: FaMobileAlt
-  },
-  {
-    title: 'Desarrollo Web',
-    content: 'Interfaces web dinámicas y modernas utilizando React, optimizadas para SEO y velocidad.',
-    icon: FaLaptopCode
-  },
-  {
-    title: 'Backend Node.js',
-    content: 'APIs RESTful seguras y escalables con Node.js y Express, con integración de bases de datos PostgreSQL.',
-    icon: FaServer
-  }
-];
-
 export const Services = () => {
+  const { t } = useLanguage();
+  const servicesTrans = t('services');
+  
+  const icons = [FaMobileAlt, FaLaptopCode, FaServer];
+  const services = servicesTrans.list.map((service, index) => ({
+    ...service,
+    icon: icons[index] || FaLaptopCode
+  }));
+
   return (
     <section id="services" className={`section ${styles.servicesSection}`}>
       <div className="container">
-        <TitleArea primero="Mis" segundo="Servicios" />
+        <TitleArea primero={servicesTrans.titleStart} segundo={servicesTrans.titleEnd} />
         <div className={styles.grid}>
-          {SERVICES.map((service, index) => (
+          {services.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
